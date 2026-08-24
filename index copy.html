@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viky</title>
+    <link rel="icon" href ="kiwi_img/huhu.png" type="image/png">
+</head>
+<body>
+    <h1 align="center">Lịch học</h1>
+    <br>
+    <table border="1" style="background-color: black;" align="center" width="800" height="100">
+        <tr style="background-color: rgb(30, 255, 0);">
+            <th>Thứ hai</th>
+            <th>Thứ ba</th>
+            <th>Thứ tư</th>
+            <th>Thứ năm</th>
+            <th>Thứ sáu</th>
+            <th>Thứ bảy</th>
+            <th>Chủ nhật</th>
+        </tr>
+
+        <tr style="background-color: rgb(255, 0, 0);" align="center">
+            <th>Toán</th>
+            <th>Văn</th>
+            <th>Anh</th>
+            <th>Hóa</th>
+            <th>Sinh</th>
+            <th>Lý</th>
+            <th>Thể dục</th>
+        </tr>
+    </table>
+<br>
+
+    <button onclick="kiwi()"  style = "background-color: yellow; color: red; font-size: 32px; border-radius: 15px;"> click me man</button>
+<!-- lệnh onclick này có tác dụng là thực hiện hàm dosomething() khi người dùng nhấn vào nút -->
+
+    <p id = "123"> kiwi la một loại trái cây</p>
+<!-- Đoạn văn này là kết quả ban đầu khi chưa nhấn nút-->
+
+    <script>
+        function kiwi() {
+            document.getElementById("123").innerHTML = "kiwi là một loại trái cây có nhiều vitamin C"; 
+        }
+
+    </script>
+    
+<!-- cái Script này dùng để chèn mã javascript vô, biến fuction để định nghĩa hàm, rồi document.getElementById để truy vào
+ cái đoạn mà có id là result, .innerHTML là để thay đổi nội dung của đoạn văn -->
+
+
+
+ <form action ="kiwi.php" method="post" enctype="multipart/form-data">
+    
+    <label for ="họ và tên">Tên của bạn</label>
+    <input type ="text" id="họ và tên" minlength="5" maxlength="15"><br>
+    <label for ="email">Email của bạn</label>
+    <input type ="email" id="email" ><br>
+    <label for ="số điện thoại">Số điện thoại của bạn</label>
+    <input type ="tel" id="số điện thoại" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000"><br>
+    <label for ="password">Mật khẩu của bạn</label>
+    <input type ="password" id="password" minlength="8" maxlength="20"><br>
+
+    <label for ="file">Tải lên tệp</label>
+    <input type ="file" id ="file"><br>
+
+    <label for ="time">Thời gian</label>
+    <input type ="time" id="time"><br>
+    
+    <label for ="date">Ngày</label>
+    <input type ="date" id="date"><br>
+    <label for ="color">Màu sắc</label>
+    <input type ="color" id="color"><br>
+
+    <input type="checkbox" id="checkbox" name="checkbox" value="value1">
+    <label for="checkbox">Tôi đồng ý với các điều khoản</label><br>
+
+    <span style="background-color: blue; font-size: 20px;">Chọn giới tính:</span><br>
+    <input type="checkbox" id="radio1" name="radio" value="value1">
+    <label for="radio1">Nam</label>
+    <input type="checkbox" id="radio2" name="radio" value="value2">
+    <label for="radio2">Nữ</label>
+    <input type="checkbox" id="radio3" name="radio" value="value3">
+    <label for="radio3">Khác</label><br>
+
+    <label for="select">Chọn một lựa chọn:</label>
+    <select id="select" name="select">
+        <option value="value1">Lựa chọn 1</option>
+        <option value="value2">Lựa chọn 2</option>
+        <option value="value3">Lựa chọn 3</option>
+    </select><br>
+
+    <label for="textarea">Nhập thông tin thêm:</label><br>
+    <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea><br>
+
+    <input type="reset">   <input type="submit" value="Gửi thông tin">
+
+ 
+</form>
+</body>
+</html>
